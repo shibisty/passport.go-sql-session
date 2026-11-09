@@ -14,7 +14,7 @@
     },
     "peerDependencies": {
         "orm": "^0.2",
-        "passport": "^0.1"
+        "passport": "^0.2"
     },
     "scripts": {
         "test": "go test ./..."
