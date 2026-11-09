@@ -1,13 +1,14 @@
 {
     "$schema": "https://raw.githubusercontent.com/shibisty/gtr/main/schema/gtr.schema.json",
     "name": "passport-session-sql",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "passport sessions and refresh tokens in a database through orm",
     "license": "MIT",
     "repository": "github:shibisty/passport.go-sql-session",
     "engines": {
         "go": ">=1.22"
     },
+    "dependencies": {},
     "devDependencies": {
         "orm": "github:shibisty/orm.go",
         "passport": "github:shibisty/passport.go"
