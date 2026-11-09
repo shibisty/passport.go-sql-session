@@ -62,7 +62,7 @@ jobs:
         run: go vet ./...
       - name: test
         shell: bash # PowerShell on Windows splits -coverprofile=coverage.out
-        run: go test -race -count=1 -coverpkg=./... -coverprofile=coverage.out ./... # -coverpkg: test helpers are counted via the packages that use them
+        run: go test -race -count=1 -coverpkg="$(go list ./... | paste -sd, -)" -coverprofile=coverage.out ./... # -coverpkg: the package's own packages (`./...` would also match gtr_modules); test helpers are counted via the packages that use them
       - name: coverage >= 80%
         if: matrix.os == 'ubuntu-latest'
         shell: bash
